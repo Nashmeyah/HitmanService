@@ -1,0 +1,5 @@
+<h2>The Victims</h2>
+<br>
+<% @victims.each do |victim|%>
+    <p><a href="/victims/<%= victim.id%>"><%=victim.name%></a></p>
+<%end%>
