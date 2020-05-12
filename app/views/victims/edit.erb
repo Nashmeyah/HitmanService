@@ -1,0 +1,19 @@
+<h2>Edit @victims = Victim.find_by_id(params[:id])ictims info!</h2>
+<br>
+<form method="POST" action="/victims/<%=@victims.id%>">
+<input type="hidden" id="hidden" name="_method" value="PATCH">
+
+<lable>Victim's Name</lable>
+<input type="text" name="victim_name" value=<%=@victims.name%>>
+<br>
+<br>
+<lable>Victim's Time of Death</lable>
+<input type="text" name="time_of_death" value=<%=@victims.time_of_death%>>
+<br>
+<br>
+<lable>Victim's Last Words</lable>
+<input type="text" name="last_words" value=<%=@victims.last_words%>>
+<br>
+<br>
+<input type="submit" value="submit">
+</form>

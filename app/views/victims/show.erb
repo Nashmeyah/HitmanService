@@ -2,3 +2,12 @@
 <br>
 <p>Time of Death: <%= @victims.time_of_death%></p>
 <p>Final Words: <%= @victims.last_words%></p>
+
+<form method="post" action="/victims/<%=@victims.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Victim">
+</form>
+
+<form action="/victims/<%=@victims.id%>/edit">
+  <input type="submit" value="Edit Victim">
+</form>
