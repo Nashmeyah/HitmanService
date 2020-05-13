@@ -5,4 +5,6 @@ if ActiveRecord::Migrator.needs_migration?
 end
 use Rack::MethodOverride
 use VictimsController
+use KillersController
+use SessionsController
 run ApplicationController
