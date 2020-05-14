@@ -20,12 +20,13 @@ class VictimsController < ApplicationController
     post '/victims' do
         if logged_in?
             @victim = current_killer.victims.build(params)
-            if !blank?
-                @victim.save
+            
+            if @victim.save
                 redirect "/victims/#{@victim.id}" 
             else
-                redirect '/victims/new'
+                erb :'/victims/new'
             end
+        else
             redirect '/login'
         end
     end
@@ -78,9 +79,8 @@ class VictimsController < ApplicationController
             @victims = current_killer.victims.find_by_id(params[:id])
                 if @victims
                     @victims.delete
-                else
-                    redirect to '/victims'
                 end
+                redirect to '/victims'
         else
             redirect '/login'
         end

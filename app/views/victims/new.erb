@@ -1,5 +1,7 @@
 <h2>Add your new victim!</h2>
 <br>
+<%= @victim.errors.full_messages if @victim%>
+
 <form method="POST" action="/victims">
 
 <lable>Victim's Name</lable>
@@ -14,5 +16,5 @@
 <input type="text" name="last_words">
 <br>
 <br>
-<input type="submit" value="Submit">
+<input type="submit" value="Submit" class="myButton">
 </form>
