@@ -1,6 +1,11 @@
 <h2>Add your new victim!</h2>
 <br>
-<%= @victim.errors.full_messages if @victim%>
+<%if @victim%>
+    <% @victim.errors.full_messages.each do |message| %>
+    <p color="red"><%= message %></p>
+    <%end%>
+<%end%>
+
 
 <form method="POST" action="/victims">
 

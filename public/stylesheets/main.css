@@ -2,7 +2,7 @@
     /* --- Reset Styles --- */
     * {
       list-style: none;
-      margin: 0;
+      margin: 12px;
       padding: 0;
     }
   
@@ -20,7 +20,8 @@
     }
   
     .wrapper {
-      background: #fff;
+        color:  #ccc;
+        background-color: darkgray;
       -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
       -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
       box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -75,7 +76,12 @@
     .branding {
       clear: both;
     }
-  
+
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+
     footer.branding {
       border-top: 2px solid #ccc;
       margin-top: 20px;
