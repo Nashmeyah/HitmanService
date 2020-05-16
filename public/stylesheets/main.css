@@ -13,7 +13,7 @@
   
     .wrapper {
       color:  #ccc;
-      margin: 200px 17px 0px 150px;
+      margin: 155px 17px 0px 150px;
       max-width: 875px;
       padding: 2.25%; /* 18px / 800px */
 
@@ -32,6 +32,7 @@
     }
     .welcome{
       border-bottom: hidden;
+      font-family: 'Source Code Pro', monospace;
     }
   
     h3 {
@@ -141,6 +142,25 @@
   padding: 10px 41px 0px;
   font-family: 'Source Code Pro', monospace;
 }
-.welcome{
-  font-family: 'Source Code Pro', monospace;
+.input {
+  margin: 26px 12px;
+  background-color: transparent;
+  border-radius: 14px;
+  border: 2px solid #fff;
+  color: #fff;
+  height: 21px;
+  padding: 5px 21px;
+} 
+.input:focus { 
+  outline: none;
+  border-color:  #3A51EF;
+  box-shadow: 0 0 10px  #3A51EF;
+}
+.myList{
+  line-height: 1.5em;
+  /* list-style-image: url("../images/halloween.png"); */
+  
+}
+.victim_list{
+  color: #ccc;
 }

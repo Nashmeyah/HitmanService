@@ -1,7 +1,7 @@
 <h2>The Victims</h2>
 <br>
 <% @victims.each do |victim|%>
-    <p><a href="/victims/<%= victim.id%>"><%=victim.name%></a></p>
+    <ul class="myList"><a class="victim_list" href="/victims/<%= victim.id%>"><%=victim.name%></a></ul>
 <%end%>
 
 <form action="/victims/new">
