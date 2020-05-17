@@ -1,7 +1,11 @@
 class KillersController < ApplicationController
 
     get '/signup' do
-        erb :'/killers/new'
+        if !logged_in?
+            erb :'/killers/new'
+        else
+            redirect '/victims'
+        end
     end
 
     post '/signup' do
