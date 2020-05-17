@@ -1,19 +1,25 @@
 <h2>Create Your Account</h2>
+<br>
+<%if @killer%>
+    <% @killer.errors.full_messages.each do |msg| %>
+    <p color="red"><%= msg %></p>
+    <%end%>
+<%end%>
 
 <form method="POST" action="/signup">
 
-<label for="name"></label>
-<input class="input" type="text" name="name" placeholder="Name">
-<br>
-<label for="email"></label>
-<input class="input" type="text" name="email" placeholder="Email">
-<br>
-<label for="specialty"></label>
-<input class="input" type="text" name="specialty" placeholder="Your Specialty">
-<br>
-<label for="password"></label>
-<input class="input" type="password" name="password" placeholder="Password">
-<br>
-<input type="submit" value="Submit" class="myButton">
+    <label for="name"></label>
+    <input class="input" type="text" name="name" placeholder="Name">
+    <br>
+    <label for="email"></label>
+    <input class="input" type="email" name="email" placeholder="Email">
+    <br>
+    <label for="specialty"></label>
+    <input class="input" type="text" name="specialty" placeholder="Your Specialty*">
+    <br>
+    <label for="password"></label>
+    <input class="input" type="password" name="password" placeholder="Password">
+    <br>
+    <input type="submit" value="Submit" class="myButton">
 </form>
  

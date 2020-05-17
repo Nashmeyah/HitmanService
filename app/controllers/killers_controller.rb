@@ -5,11 +5,17 @@ class KillersController < ApplicationController
     end
 
     post '/signup' do
-        killer = Killer.new(params)
-        if killer.save
+        
+        @killer = Killer.new(params)
+        
+        if @killer.save
+            
             redirect '/victims'
+            
         else
-            redirect '/signup'
+            erb :'/killers/new'
+            
         end
+        
     end
 end
