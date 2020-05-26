@@ -1,7 +1,8 @@
 @media screen {
 
     html{
-      background-image: url("../images/dark-simplistic-wallpaper-1080p-1920×1200.jpg");
+      background: url("../images/dark-simplistic-wallpaper-1080p-1920×1200.jpg") no-repeat center fixed;
+      background-size: cover;
     }
   
     /* --- Welcome Page Styles --- */
@@ -46,7 +47,7 @@
     .branding {
       clear: both;
     }
-
+/* 
     footer {
         position: absolute;
         width: 100%;
@@ -57,10 +58,61 @@
       border-top: 1px solid #ccc;
       margin-top: 20px;
       padding-top: 10px;
-    }
+    } */
     small {
       color: darkgray;
     }
+    .myButton {
+      background-color:transparent;
+      border-radius:42px;
+      border:2px solid#3A51EF;
+      background-color: #3A51EF;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:17px;
+      font-weight:bold;
+      padding:9px 31px;
+      text-decoration:none;
+      text-shadow:0px 0px 0px #283966;
+      margin: 0px 15px 0px 0px;
+    }
+    .myButton:hover {
+      background-color:transparent;
+    }
+    .myButton:active {
+      position:relative;
+      top:1px;
+    }
+    
+    .logo{
+      color: #ccc;
+      padding: 10px 41px 0px;
+      font-family: 'Source Code Pro', monospace;
+    }
+    .input {
+      margin: 26px 12px;
+      background-color: transparent;
+      border-radius: 14px;
+      border: 2px solid #fff;
+      color: #fff;
+      height: 21px;
+      padding: 5px 21px;
+    } 
+    .input:focus { 
+      outline: none;
+      border-color:  #3A51EF;
+      box-shadow: 0 0 10px  #3A51EF;
+    }
+    .myList{
+      line-height: 1.5em;
+      /* list-style-image: url("../images/halloween.png");  */
+    }
+    .victim_list{
+      color: #ccc;
+    }
+    
   }
   
   @media screen and (max-width: 600px) {
@@ -81,53 +133,4 @@
       line-height: 24px;
     }
   }
-  .myButton {
-	background-color:transparent;
-	border-radius:42px;
-  border:2px solid#3A51EF;
-  background-color: #3A51EF;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	font-weight:bold;
-	padding:9px 31px;
-	text-decoration:none;
-  text-shadow:0px 0px 0px #283966;
-  margin: 0px 15px 0px 0px;
-}
-.myButton:hover {
-	background-color:transparent;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-
-.logo{
-  color: #ccc;
-  padding: 10px 41px 0px;
-  font-family: 'Source Code Pro', monospace;
-}
-.input {
-  margin: 26px 12px;
-  background-color: transparent;
-  border-radius: 14px;
-  border: 2px solid #fff;
-  color: #fff;
-  height: 21px;
-  padding: 5px 21px;
-} 
-.input:focus { 
-  outline: none;
-  border-color:  #3A51EF;
-  box-shadow: 0 0 10px  #3A51EF;
-}
-.myList{
-  line-height: 1.5em;
-  /* list-style-image: url("../images/halloween.png");  */
-}
-.victim_list{
-  color: #ccc;
-}
+  
