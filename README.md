@@ -11,6 +11,7 @@
 1. Run the command ` bundle install ` to get the latest and the required gems. 
 1. Run ` rake db:migrate ` to set up your databse. 
 1. Run `shotgun` to view the app in your browser.
+2. enter the ip address you get into your terminal into the browser.
 
 # License
 Copyright 2020 NASHMEYAH
