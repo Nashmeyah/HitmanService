@@ -30,10 +30,10 @@ class VictimsController < ApplicationController
             redirect '/login'
         end
     end
-
+    
     get '/victims/:id/edit' do #edit
         if logged_in?
-            @victims = current_killer.victims.find_by_id(params[:id])
+            set_victim
                 if @victims
                     erb :'/victims/edit'
                 else
@@ -46,7 +46,7 @@ class VictimsController < ApplicationController
 
     patch '/victims/:id' do
         if logged_in?
-            @victims = current_killer.victims.find_by_id(params[:id])
+            set_victim
                 if @victims
                     if @victims.update(name: params[:victim_name], time_of_death: params[:time_of_death], last_words: params[:last_words])
                         redirect "/victims/#{@victims.id}"
@@ -63,7 +63,7 @@ class VictimsController < ApplicationController
 
     get '/victims/:id' do  #show
         if logged_in?
-            @victims = current_killer.victims.find_by_id(params[:id])
+            set_victim
                 if @victims
                     erb :'/victims/show'
                 else
@@ -76,7 +76,7 @@ class VictimsController < ApplicationController
 
     delete '/victims/:id' do
         if logged_in?
-            @victims = current_killer.victims.find_by_id(params[:id])
+            set_victim
                 if @victims
                     @victims.delete
                 end
@@ -86,6 +86,10 @@ class VictimsController < ApplicationController
         end
     end
 
-
+    helpers do 
+        def set_victim
+            @victims = current_killer.victims.find_by_id(params[:id])
+        end
+    end
     
 end

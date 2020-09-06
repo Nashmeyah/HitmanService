@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-    set :session_secret, "lilac"
+    set :session_secret, "+(k[5HRM,t,@uysy"
   end
 
   get "/" do
@@ -21,6 +21,8 @@ class ApplicationController < Sinatra::Base
     def current_killer
       @killer ||= Killer.find_by_id(session[:killer_id]) if logged_in?
     end
+
+    
   end
 
 end
