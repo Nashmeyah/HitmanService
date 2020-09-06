@@ -1,4 +1,4 @@
-@media screen {
+/* @media screen { */
 
     html{
       background: url("../images/dark-simplistic-wallpaper-1080p-1920×1200.jpg") no-repeat center fixed;
@@ -6,15 +6,9 @@
     }
   
     /* --- Welcome Page Styles --- */
-    body {
-      font-family: Sans-Serif;
-      line-height: 18px;
-      background-color: transparent;
-    }
-  
     .wrapper {
       color:  #ccc;
-      margin: 155px 17px 0px 150px;
+      margin: 120px 17px 0px 150px;
       max-width: 875px;
       padding: 2.25%; /* 18px / 800px */
     }
@@ -113,7 +107,7 @@
       color: #ccc;
     }
     
-  }
+  /* } */
   
   @media screen and (max-width: 600px) {
     .wrapper {
